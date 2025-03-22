@@ -7,31 +7,32 @@
     <style>
         /* Reset body styles */
         body {
-            font-family: Gotham, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #0f354e; /* Applied main color */
-        }
+    font-family: Gotham, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #0f354e; /* Applied main color */
+    padding-top: 20px;  /* Space at the top of the page */
+    padding-bottom: 20px; /* Space at the bottom of the page */
+}
 
         /* Letter Container */
         .letter-container {
             width: 100%;
             max-width: 800px;
             background-color: white;
-           
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            margin: 100px; /* Margin around the letter */
+            margin: 20px; /* Margin around the letter */
         }
 
         /* Header with full-width background image */
         header {
-            background-image: url('background.jpg');
+            background-image: url('./images/background.jpg');
             background-size: cover;
             background-position: center;
             height: 350px; /* Increased height for more visibility of the background image */
@@ -49,6 +50,9 @@
             padding: 20px 40px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
+            width: 80%; /* Limit the width of the header box */
+            max-width: 800px; /* Ensure it doesn’t exceed the width of the letter */
+            margin: 0 auto; /* Center the header box */
         }
 
         /* Header text styles */
@@ -61,12 +65,13 @@
         }
 
         .header-box h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: bold;
-            font-size: 48pt;
-            margin: 10px 0 5px 0;
-            color: #0f354e;
-        }
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 48pt;
+    margin: 10px 0 5px 0;
+    color: #0f354e;
+    white-space: nowrap; /* Prevents the name from wrapping to the next line on larger screens */
+}
 
         .header-box h3 {
             font-family: Gotham, sans-serif;
@@ -149,80 +154,83 @@
             height: auto;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .letter-container {
-                width: 90%; /* Makes the letter container take up 90% of the screen on smaller devices */
-                padding: 20px; /* Reduced padding for smaller screens */
-            }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-container {
+        width: 90%; /* Hace que el contenedor ocupe el 90% de la pantalla en dispositivos pequeños */
+        padding: 20px; /* Relleno reducido para pantallas más pequeñas */
+    }
 
-            /* Adjust header box padding for smaller devices */
-            .header-box {
-                padding: 15px 25px;
-            }
+    /* Ajustar el relleno del cuadro del encabezado para dispositivos pequeños */
+    .header-box {
+        padding: 15px 25px;
+    }
 
-            /* Adjust header text size for smaller devices */
-            .header-box h1 {
-                font-size: 16pt;
-            }
+    /* Ajustar el tamaño de la fuente para "CONGRATULATIONS" */
+    .header-box h1 {
+        font-size: 14pt; /* Reducir el tamaño de la fuente de "CONGRATULATIONS" */
+        text-align: center; /* Centrar el texto */
+    }
 
-            .header-box h2 {
-                font-size: 32pt;
-            }
+    /* Ajustar el tamaño de la fuente para "MICHELLE MORGAN" */
+    .header-box h2 {
+        font-size: 32pt; /* Disminuir el tamaño de la fuente para pantallas más pequeñas */
+        white-space: normal; /* Permite que el texto se ajuste en múltiples líneas */
+        text-align: center; /* Centra el texto si se ajusta a varias líneas */
+    }
 
-            .header-box h3 {
-                font-size: 14pt;
-            }
+    .header-box h3 {
+        font-size: 14pt;
+    }
 
-            .header-box h4 {
-                font-size: 22pt;
-            }
+    .header-box h4 {
+        font-size: 22pt;
+    }
 
-            /* Stack signatures vertically on small screens */
-            .signatures-container {
-                flex-direction: column;
-                align-items: center;
-            }
+    /* Ajustar la dirección de las firmas en pantallas pequeñas */
+    .signatures-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .signature {
-                width: 80%; /* Makes the signature section wider on smaller screens */
-                margin-bottom: 20px;
-            }
+    .signature {
+        width: 80%; /* Hace que la sección de firma sea más ancha en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
 
-            /* Reduce logo size for smaller screens */
-            .logo-container img {
-                width: 80px;
-            }
-        }
+    /* Reducir el tamaño del logo para pantallas más pequeñas */
+    .logo-container img {
+        width: 80px;
+    }
+}
 
-        /* Further adjust for very small screens (mobile devices) */
-        @media (max-width: 480px) {
-            .header-box h1 {
-                font-size: 14pt;
-            }
+/* Ajustes adicionales para pantallas muy pequeñas (dispositivos móviles) */
+@media (max-width: 480px) {
+    .header-box h1 {
+        font-size: 12pt; /* Reducir aún más el tamaño de "CONGRATULATIONS" para pantallas pequeñas */
+    }
 
-            .header-box h2 {
-                font-size: 28pt;
-            }
+    .header-box h2 {
+        font-size: 28pt;
+    }
 
-            .header-box h3 {
-                font-size: 12pt;
-            }
+    .header-box h3 {
+        font-size: 12pt;
+    }
 
-            .header-box h4 {
-                font-size: 20pt;
-            }
+    .header-box h4 {
+        font-size: 20pt;
+    }
 
-            /* Adjust signature text size for mobile */
-            .signature p {
-                font-size: 1em;
-            }
+    /* Ajustar el tamaño del texto de las firmas en dispositivos móviles */
+    .signature p {
+        font-size: 1em;
+    }
 
-            .signature span {
-                font-size: 7pt;
-            }
-        }
-
+    .signature span {
+        font-size: 7pt;
+    }
+}
     </style>
 </head>
 <body>
@@ -260,24 +268,24 @@
         <footer>
             <div class="signatures-container">
                 <div class="signature">
-                    <img src="firma1.png" alt="Marcia Hager's Signature">
-                    <p>Marcia Hager</p>
-                    <span>Founder</span> <!-- Small uppercase title -->
-                </div>
-                <div class="signature">
-                    <img src="firma2.png" alt="Brad Hager's Signature">
+                    <img src="./images/Signature-BradHager.png" alt="Brad Hager's Signature">
                     <p>Brad Hager</p>
                     <span>Founder</span> <!-- Small uppercase title -->
                 </div>
+                <div class="signature">
+                    <img src="./images/Signature-MarciaHager.png" alt="Marcia Hager's Signature">
+                    <p>Marcia Hager</p>
+                    <span>Founder</span> <!-- Small uppercase title -->
+                </div>
+                
             </div>
 
             <!-- Centered logo -->
             <div class="logo-container">
-                <img src="logo.png" alt="Company Logo">
+                <img src="./images/CBD Logo_rgb.png" alt="Company Logo">
             </div>
         </footer>
     </div>
 
 </body>
 </html>
-
