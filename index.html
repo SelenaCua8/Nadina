@@ -186,12 +186,10 @@
     .header-box h4 {
         font-size: 22pt;
     }
-
-    /* Ajustar la dirección de las firmas en pantallas pequeñas */
-    
-    .body{
-        height: 0;
-    }
+body{
+    display: block;
+}
+   
     .letter-container{
         padding: 0px;
     }
@@ -201,26 +199,26 @@
     }
 
     .signature {
-        width: 80%; /* Hace que la sección de firma sea más ancha en pantallas pequeñas */
+        width: 80%; 
         margin-bottom: 20px;
     }
 
-    /* Reducir el tamaño del logo para pantallas más pequeñas */
     .logo-container img {
         width: 80px;
     }
 }
 
-/* Ajustes adicionales para pantallas muy pequeñas (dispositivos móviles) */
+
 @media (max-width: 480px) {
-    .body{
-        height: 0;
+    body{
+        display: block;
     }
+   
     .letter-container{
         padding: 0px;
     }
     .header-box h1 {
-        font-size: 12pt; /* Reducir aún más el tamaño de "CONGRATULATIONS" para pantallas pequeñas */
+        font-size: 12pt; 
     }
 
     .header-box h2 {
