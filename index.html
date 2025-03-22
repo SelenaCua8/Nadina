@@ -7,7 +7,7 @@
     <style>
         /* Reset body styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Gotham, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -15,25 +15,26 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #0f354e; /* Applied main color */
         }
 
-        
+        /* Letter Container */
         .letter-container {
-            width: 60%;
+            width: 100%;
             max-width: 800px;
             background-color: white;
-            padding: 0; /* Removed padding to ensure header fits perfectly */
-            
+           
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Prevents the header from overflowing */
+            overflow: hidden;
+            margin: 100px; /* Margin around the letter */
         }
 
         /* Header with full-width background image */
         header {
-            background-image: url('gota-de-agua-fondo.avif');
+            background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
-            height: 250px;
+            height: 350px; /* Increased height for more visibility of the background image */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,42 +45,50 @@
 
         /* White box inside the header for text */
         .header-box {
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Slight transparency to make the background image visible */
             padding: 20px 40px;
-            
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
 
         /* Header text styles */
         .header-box h1 {
-            font-size: 2.5em;
+            font-family: Gotham, sans-serif;
+            font-weight: medium;
+            font-size: 19pt;
             margin: 0;
-            color: #333;
+            color: #0f354e;
         }
 
         .header-box h2 {
-            font-size: 2em;
-            margin: 10px 0 5px 0;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: bold;
-            color: #555;
+            font-size: 48pt;
+            margin: 10px 0 5px 0;
+            color: #0f354e;
         }
 
         .header-box h3 {
-            font-size: 1.5em;
+            font-family: Gotham, sans-serif;
+            font-weight: book;
+            font-size: 16pt;
             margin: 5px 0;
-            color: #777;
-        }
-        .header-box h4 {
-            font-size: 1.5em;
-            margin: 5px 0;
-            color: #777;
+            color: #0f354e;
         }
 
-        /* Content section with the same alignment as the header box */
+        .header-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            font-size: 28pt;
+            margin: 5px 0;
+            color: #0f354e;
+        }
+
+        /* Content section */
         .content {
             padding: 30px 40px; /* Matches header box padding */
-            font-size: 1.2em;
+            font-family: Gotham, sans-serif;
+            font-size: 12pt; /* BODY font size */
             line-height: 1.6;
             text-align: justify;
         }
@@ -112,20 +121,22 @@
         /* Name under the signature */
         .signature p {
             margin-top: 5px;
+            font-family: Gotham, sans-serif;
             font-weight: bold;
             font-size: 1.1em;
+            color: #0f354e;
         }
 
-        
         /* Small FOUNDER text under the name */
-.signature span {
-    display: block;
-    font-size: 0.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #555;
-    margin-top: -18px; /* Reduced space */
-}
+        .signature span {
+            display: block;
+            font-family: Gotham, sans-serif;
+            font-size: 8pt; /* FOUNDER text size */
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #0f354e;
+            margin-top: -18px; /* Reduced space */
+        }
 
         /* Centered logo below the signatures */
         .logo-container {
@@ -136,6 +147,80 @@
         .logo-container img {
             width: 100px;
             height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .letter-container {
+                width: 90%; /* Makes the letter container take up 90% of the screen on smaller devices */
+                padding: 20px; /* Reduced padding for smaller screens */
+            }
+
+            /* Adjust header box padding for smaller devices */
+            .header-box {
+                padding: 15px 25px;
+            }
+
+            /* Adjust header text size for smaller devices */
+            .header-box h1 {
+                font-size: 16pt;
+            }
+
+            .header-box h2 {
+                font-size: 32pt;
+            }
+
+            .header-box h3 {
+                font-size: 14pt;
+            }
+
+            .header-box h4 {
+                font-size: 22pt;
+            }
+
+            /* Stack signatures vertically on small screens */
+            .signatures-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .signature {
+                width: 80%; /* Makes the signature section wider on smaller screens */
+                margin-bottom: 20px;
+            }
+
+            /* Reduce logo size for smaller screens */
+            .logo-container img {
+                width: 80px;
+            }
+        }
+
+        /* Further adjust for very small screens (mobile devices) */
+        @media (max-width: 480px) {
+            .header-box h1 {
+                font-size: 14pt;
+            }
+
+            .header-box h2 {
+                font-size: 28pt;
+            }
+
+            .header-box h3 {
+                font-size: 12pt;
+            }
+
+            .header-box h4 {
+                font-size: 20pt;
+            }
+
+            /* Adjust signature text size for mobile */
+            .signature p {
+                font-size: 1em;
+            }
+
+            .signature span {
+                font-size: 7pt;
+            }
         }
 
     </style>
@@ -157,33 +242,31 @@
 
         <!-- Letter Content -->
         <div class="content">
-            <p>
-                <p>This is the beginning of an exciting journey toward health, wellness, and prosperity. Your commitment to personal growth and taking action to build a solid foundation is commendable.</p>
+            <p>This is the beginning of an exciting journey toward health, wellness, and prosperity. Your commitment to personal growth and taking action to build a solid foundation is commendable.</p>
 
-                <p>Every great achievement starts with a single step, and you’ve taken yours with confidence. Keep pushing forward!</p>
-                
-                <p>Your achievements inspire us all, and we’re excited to see how your journey unfolds.</p>
-                
-                <p>We are also sending you your Certificate of Recognition—print it, display it proudly, and let it remind you of this exciting milestone on your journey!</p>
-                
-                <p>You are an essential part of our community, and we look forward to many more celebrations ahead!</p>
-                
-                <p>Warmest regards,</p>
-                
-            </p>
+            <p>Every great achievement starts with a single step, and you’ve taken yours with confidence. Keep pushing forward!</p>
+            
+            <p>Your achievements inspire us all, and we’re excited to see how your journey unfolds.</p>
+            
+            <p>We are also sending you your Certificate of Recognition—print it, display it proudly, and let it remind you of this exciting milestone on your journey!</p>
+            
+            <p>You are an essential part of our community, and we look forward to many more celebrations ahead!</p>
+            
+            <p>Warmest regards,</p>
+            
         </div>
 
         <!-- Footer with signatures and logo -->
         <footer>
             <div class="signatures-container">
                 <div class="signature">
-                    <img src="firma1.png" alt="Juan Pérez's Signature">
-                    <p>Juan Pérez</p>
+                    <img src="firma1.png" alt="Marcia Hager's Signature">
+                    <p>Marcia Hager</p>
                     <span>Founder</span> <!-- Small uppercase title -->
                 </div>
                 <div class="signature">
-                    <img src="firma2.png" alt="María López's Signature">
-                    <p>María López</p>
+                    <img src="firma2.png" alt="Brad Hager's Signature">
+                    <p>Brad Hager</p>
                     <span>Founder</span> <!-- Small uppercase title -->
                 </div>
             </div>
@@ -197,3 +280,4 @@
 
 </body>
 </html>
+
