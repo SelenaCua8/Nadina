@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Poder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal de la carta */
+        .carta-container {
+            width: 60%;
+            max-width: 800px;
+            background-color: white;
+            padding: 0; /* Se elimina el padding para que el header encaje perfecto */
+            
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Para que el header no sobresalga */
+        }
+
+        /* Header que ocupa TODO el ancho de la carta */
+        header {
+            background-image: url('gota-de-agua-fondo.avif');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            width: 100%; /* Ahora ocupa solo el ancho de la carta */
+        }
+
+        /* Estilos del texto en el header */
+        .header-box {
+            background: white;
+            padding: 20px 40px;
+            
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .header-box h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #333;
+        }
+
+        .header-box h2 {
+            font-size: 2em;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .header-box h3 {
+            font-size: 1.5em;
+            margin: 5px 0;
+            color: #777;
+        }
+
+        /* Contenido alineado con el header-box */
+        .content {
+            padding: 30px 40px; /* Misma alineación que el rectángulo del header */
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Footer con firmas en fila y logo centrado */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .firmas-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 40px; /* Alineado con el texto */
+        }
+
+        .firma {
+            text-align: center;
+            width: 40%;
+        }
+
+        .firma img {
+            width: 150px;
+            height: auto;
+        }
+
+        .firma p {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Logo centrado debajo de las firmas */
+        .logo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo-container img {
+            width: 100px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="carta-container">
+        <header>
+            <div class="header-box">
+                <h1>CONGRATULATIONS</h1>
+                <h2>MICHELLE MORGAN CUADRA</h2>
+                <h3>ON ACHIEVING</h3>
+                <h1>C1</h1>
+            </div>
+        </header>
+
+        <div class="content">
+            <p>
+                Por medio de la presente, yo, <strong>Juan Pérez</strong>, otorgo el poder amplio y suficiente a <strong>María López</strong> para que en mi nombre pueda realizar todos los trámites necesarios ante las autoridades competentes.
+            </p>
+            <p>
+                Este poder tiene validez desde la fecha de su firma y es aplicable exclusivamente para los trámites relacionados con mi solicitud en el área de <strong>Documentos Personales</strong>.
+            </p>
+            <p>
+                Atentamente,
+            </p>
+        </div>
+
+        <footer>
+            <div class="firmas-container">
+                <div class="firma">
+                    <img src="firma1.png" alt="Firma de Juan Pérez">
+                    <p>Juan Pérez</p>
+                </div>
+                <div class="firma">
+                    <img src="firma2.png" alt="Firma de María López">
+                    <p>María López</p>
+                </div>
+            </div>
+
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de la empresa">
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
