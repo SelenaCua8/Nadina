@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta Poder</title>
+    <title>Power of Attorney Letter</title>
     <style>
+        /* Reset body styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,18 +17,18 @@
             height: 100vh;
         }
 
-        /* Contenedor principal de la carta */
-        .carta-container {
+        /* Main letter container */
+        .letter-container {
             width: 60%;
             max-width: 800px;
             background-color: white;
-            padding: 0; /* Se elimina el padding para que el header encaje perfecto */
+            padding: 0; /* Removed padding to ensure header fits perfectly */
             
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Para que el header no sobresalga */
+            overflow: hidden; /* Prevents the header from overflowing */
         }
 
-        /* Header que ocupa TODO el ancho de la carta */
+        /* Header with full-width background image */
         header {
             background-image: url('gota-de-agua-fondo.avif');
             background-size: cover;
@@ -38,10 +39,10 @@
             justify-content: center;
             text-align: center;
             color: white;
-            width: 100%; /* Ahora ocupa solo el ancho de la carta */
+            width: 100%; /* Ensures the header is as wide as the letter */
         }
 
-        /* Estilos del texto en el header */
+        /* White box inside the header for text */
         .header-box {
             background: white;
             padding: 20px 40px;
@@ -50,6 +51,7 @@
             text-align: center;
         }
 
+        /* Header text styles */
         .header-box h1 {
             font-size: 2.5em;
             margin: 0;
@@ -69,44 +71,58 @@
             color: #777;
         }
 
-        /* Contenido alineado con el header-box */
+        /* Content section with the same alignment as the header box */
         .content {
-            padding: 30px 40px; /* Misma alineación que el rectángulo del header */
+            padding: 30px 40px; /* Matches header box padding */
             font-size: 1.2em;
             line-height: 1.6;
             text-align: justify;
         }
 
-        /* Footer con firmas en fila y logo centrado */
+        /* Footer with signatures aligned in a row */
         footer {
             margin-top: 50px;
             text-align: center;
         }
 
-        .firmas-container {
+        .signatures-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
-            padding: 0 40px; /* Alineado con el texto */
+            padding: 0 40px; /* Matches content padding */
         }
 
-        .firma {
+        /* Individual signature */
+        .signature {
             text-align: center;
-            width: 40%;
+            width: 30%;
         }
 
-        .firma img {
+        .signature img {
             width: 150px;
             height: auto;
         }
 
-        .firma p {
+        /* Name under the signature */
+        .signature p {
             margin-top: 5px;
             font-weight: bold;
+            font-size: 1.1em;
         }
 
-        /* Logo centrado debajo de las firmas */
+        
+        /* Small FOUNDER text under the name */
+.signature span {
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: -18px; /* Reduced space */
+}
+
+        /* Centered logo below the signatures */
         .logo-container {
             text-align: center;
             margin-top: 20px;
@@ -121,42 +137,50 @@
 </head>
 <body>
 
-    <div class="carta-container">
+    <!-- Letter Container -->
+    <div class="letter-container">
+        
+        <!-- Header with background image and white text box -->
         <header>
             <div class="header-box">
                 <h1>CONGRATULATIONS</h1>
-                <h2>MICHELLE MORGAN CUADRA</h2>
+                <h2>MICHELLE MORGAN</h2>
                 <h3>ON ACHIEVING</h3>
                 <h1>C1</h1>
             </div>
         </header>
 
+        <!-- Letter Content -->
         <div class="content">
             <p>
-                Por medio de la presente, yo, <strong>Juan Pérez</strong>, otorgo el poder amplio y suficiente a <strong>María López</strong> para que en mi nombre pueda realizar todos los trámites necesarios ante las autoridades competentes.
+                By this letter, I, <strong>Juan Pérez</strong>, grant full and sufficient power to <strong>María López</strong> so that, on my behalf, she may carry out all necessary procedures before the competent authorities.
             </p>
             <p>
-                Este poder tiene validez desde la fecha de su firma y es aplicable exclusivamente para los trámites relacionados con mi solicitud en el área de <strong>Documentos Personales</strong>.
+                This power of attorney is valid from the date of signing and applies exclusively to the procedures related to my application in the area of <strong>Personal Documents</strong>.
             </p>
             <p>
-                Atentamente,
+                Sincerely,
             </p>
         </div>
 
+        <!-- Footer with signatures and logo -->
         <footer>
-            <div class="firmas-container">
-                <div class="firma">
-                    <img src="firma1.png" alt="Firma de Juan Pérez">
+            <div class="signatures-container">
+                <div class="signature">
+                    <img src="firma1.png" alt="Juan Pérez's Signature">
                     <p>Juan Pérez</p>
+                    <span>Founder</span> <!-- Small uppercase title -->
                 </div>
-                <div class="firma">
-                    <img src="firma2.png" alt="Firma de María López">
+                <div class="signature">
+                    <img src="firma2.png" alt="María López's Signature">
                     <p>María López</p>
+                    <span>Founder</span> <!-- Small uppercase title -->
                 </div>
             </div>
 
+            <!-- Centered logo -->
             <div class="logo-container">
-                <img src="logo.png" alt="Logo de la empresa">
+                <img src="logo.png" alt="Company Logo">
             </div>
         </footer>
     </div>
